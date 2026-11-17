@@ -82,10 +82,15 @@ The trade-off is that concurrent redeems for the **same member** are serialised 
 
 ## Measured results
 
-<!-- Results filled from AI_Context/Results.md after mvn verify runs -->
+Results measured from real command execution (`mvn verify`) and recorded in `AI_Context/Results.md`:
 
-| Metric | Value |
-|--------|-------|
-| `mvn verify` | see Results.md |
-| JaCoCo line coverage | see Results.md |
-| Concurrency test (×5 runs) | see Results.md |
+| Metric | Measured Value |
+|--------|----------------|
+| `mvn verify` status | **BUILD SUCCESS** (18 tests run: 0 failures, 0 errors, 0 skipped) |
+| JaCoCo line coverage | **96%** (108 / 113 instructions/lines covered) |
+| JaCoCo branch coverage | **100%** (4 / 4 branches covered) |
+| Concurrency test (`@RepeatedTest(5)`) | **100% pass rate** (20 threads, 10 succeeded, 10 failed with 409, final balance 0 in all 5 runs) |
+| Unit tests (Mockito) | 6 tests passed |
+| Integration tests (Testcontainers PostgreSQL) | 7 tests passed |
+
+

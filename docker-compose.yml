@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16.4
+    container_name: rewards-postgres
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - rewards_pg_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  rewards_pg_data:

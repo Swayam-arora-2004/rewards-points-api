@@ -110,3 +110,4 @@ class MemberServiceTest {
                 .isInstanceOf(DuplicateEmailException.class);
     }
 }
+

@@ -10,3 +10,4 @@ public class DuplicateEmailException extends RuntimeException {
         super("Email already registered: " + email);
     }
 }
+

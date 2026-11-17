@@ -10,3 +10,4 @@ public class MemberNotFoundException extends RuntimeException {
         super("Member not found: " + id);
     }
 }
+

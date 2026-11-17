@@ -108,3 +108,4 @@ class ConcurrencyTest {
         assertThat(finalBalance).as("final balance after concurrent redeems").isEqualTo(0L);
     }
 }
+

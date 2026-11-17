@@ -14,3 +14,4 @@ public interface PointsTransactionRepository extends JpaRepository<PointsTransac
     @Query("SELECT t FROM PointsTransaction t WHERE t.member.id = :memberId ORDER BY t.createdAt DESC")
     List<PointsTransaction> findByMemberIdOrderByCreatedAtDesc(@Param("memberId") Long memberId);
 }
+

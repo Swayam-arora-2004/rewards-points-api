@@ -12,3 +12,4 @@ public record MemberResponse(
         long balance,
         List<TransactionResponse> transactions
 ) {}
+

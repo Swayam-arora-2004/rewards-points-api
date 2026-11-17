@@ -78,6 +78,23 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+            <!-- Pass Docker socket env-vars into the Surefire JVM so Testcontainers
+                 finds Docker Desktop on macOS (Decision D-004).
+                 TESTCONTAINERS_RYUK_DISABLED=true: Ryuk container fails to inspect on
+                 Docker Desktop macOS (404 on the shaded client); disabling it is safe
+                 since containers are cleaned up at JVM exit anyway (Decision D-005). -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <environmentVariables>
+                        <DOCKER_HOST>unix:///Users/sa/Library/Containers/com.docker.docker/Data/docker.raw.sock</DOCKER_HOST>
+                        <TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE>/Users/sa/Library/Containers/com.docker.docker/Data/docker.raw.sock</TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE>
+                        <TESTCONTAINERS_RYUK_DISABLED>true</TESTCONTAINERS_RYUK_DISABLED>
+                    </environmentVariables>
+                </configuration>
+            </plugin>
+
             <!-- JaCoCo code coverage -->
             <plugin>
                 <groupId>org.jacoco</groupId>

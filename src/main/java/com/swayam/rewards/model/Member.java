@@ -55,3 +55,4 @@ public class Member {
         this.balance -= points;
     }
 }
+

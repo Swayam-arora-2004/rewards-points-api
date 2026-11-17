@@ -111,3 +111,4 @@ public class MemberService {
         return MemberMapper.toResponse(member, history);
     }
 }
+

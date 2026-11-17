@@ -141,3 +141,4 @@ class MemberIntegrationTest {
                 .andExpect(status().isBadRequest());
     }
 }
+

@@ -9,3 +9,4 @@ public record PointsRequest(
         @Positive(message = "points must be greater than 0")
         long points
 ) {}
+

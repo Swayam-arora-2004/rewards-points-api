@@ -10,3 +10,4 @@ public class InsufficientBalanceException extends RuntimeException {
         super("Insufficient balance: requested " + requested + " but only " + available + " available");
     }
 }
+

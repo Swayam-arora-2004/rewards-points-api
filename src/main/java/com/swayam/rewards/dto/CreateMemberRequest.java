@@ -18,3 +18,4 @@ public record CreateMemberRequest(
         @Size(max = 200, message = "email must be 200 characters or fewer")
         String email
 ) {}
+

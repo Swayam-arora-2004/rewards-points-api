@@ -10,3 +10,4 @@ public class RewardsPointsApiApplication {
         SpringApplication.run(RewardsPointsApiApplication.class, args);
     }
 }
+

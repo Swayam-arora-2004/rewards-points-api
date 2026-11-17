@@ -55,3 +55,4 @@ public class PointsTransaction {
     public long getPoints() { return points; }
     public Instant getCreatedAt() { return createdAt; }
 }
+

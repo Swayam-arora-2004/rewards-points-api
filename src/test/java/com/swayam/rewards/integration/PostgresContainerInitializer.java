@@ -32,3 +32,4 @@ public class PostgresContainerInitializer
         ).applyTo(ctx.getEnvironment());
     }
 }
+
